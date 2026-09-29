@@ -1,0 +1,29 @@
+model_repository: /workspace/model_repository
+triton_launch_mode: local
+run_config_search_disable: true
+client_protocol: http
+collect_cpu_metrics: true
+
+checkpoint_directory: /tmp/model-analyzer/checkpoints
+output_model_repository_path: /tmp/model-analyzer/models
+export_path: /workspace/results/model-analyzer
+triton_output_path: /workspace/results/model-analyzer/triton.log
+perf_output: true
+perf_output_path: /workspace/results/model-analyzer/perf.log
+
+concurrency: [1, 8, 16, 32]
+batch_sizes: [1]
+
+perf_analyzer_flags:
+  shape: INPUT:1,4
+  measurement-interval: 5000
+  max-trials: 20
+  stability-percentage: 20
+
+profile_models:
+  iris_classifier:
+    cpu_only: true
+    model_config_parameters:
+      instance_group:
+        - kind: KIND_CPU
+          count: 1

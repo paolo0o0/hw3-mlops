@@ -1,0 +1,17 @@
+{
+  "iris_processing_seconds_total": {
+    "first": 3.73365296501197,
+    "last": 101.0592265109817,
+    "monotonic": true
+  },
+  "iris_requests": {
+    "min": 0.0,
+    "max": 1.0
+  },
+  "nv_inference_pending_request_count": {
+    "max": 31.0
+  },
+  "nv_inference_request_failure": {
+    "max": 0.0
+  }
+}

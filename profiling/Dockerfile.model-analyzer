@@ -1,0 +1,11 @@
+FROM nvcr.io/nvidia/tritonserver:25.11-py3-sdk AS sdk
+FROM triton-iris:latest
+
+COPY --from=sdk /usr/local/lib/python3.12/dist-packages/perf_analyzer /usr/local/lib/python3.12/dist-packages/perf_analyzer
+COPY --from=sdk /usr/local/bin/perf_analyzer /usr/local/bin/perf_analyzer
+
+RUN python3 -m pip install --no-cache-dir \
+    triton-model-analyzer==1.48.0 \
+    numpy==2.3.5 \
+    'tritonclient[http]==2.63.0' \
+    perf-analyzer==2.59.1

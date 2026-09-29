@@ -1,0 +1,14 @@
+Model,Batch,Concurrency,Model Config Path,Instance Group,Max Batch Size,Satisfies Constraints,Throughput (infer/sec),p99 Latency (ms)
+iris_classifier,1,32,iris_classifier_config_1,2:CPU,0,Yes,334.3,149.3
+iris_classifier,1,8,iris_classifier_config_1,2:CPU,0,Yes,221.6,55.9
+iris_classifier,1,16,iris_classifier_config_1,2:CPU,0,Yes,187.4,163.9
+iris_classifier,1,1,iris_classifier_config_1,2:CPU,0,Yes,159.5,8.0
+iris_classifier,1,32,iris_classifier_config_0,1:CPU,0,Yes,190.5,188.1
+iris_classifier,1,8,iris_classifier_config_0,1:CPU,0,Yes,187.5,61.5
+iris_classifier,1,1,iris_classifier_config_0,1:CPU,0,Yes,179.8,6.3
+iris_classifier,1,16,iris_classifier_config_0,1:CPU,0,Yes,172.8,112.1
+iris_classifier,1,16,iris_classifier_config_default,1:CPU,0,Yes,189.4,104.9
+iris_classifier,1,8,iris_classifier_config_default,1:CPU,0,Yes,189.0,53.6
+iris_classifier,1,32,iris_classifier_config_default,1:CPU,0,Yes,188.7,193.4
+iris_classifier,1,1,iris_classifier_config_default,1:CPU,0,Yes,184.0,6.2
+
