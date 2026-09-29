@@ -10,6 +10,6 @@ docker build \
 docker run --rm --shm-size=1g \
   -v "$PWD:/workspace" \
   triton-iris-model-analyzer \
-  model-analyzer profile \
-  -f /workspace/profiling/model-analyzer.yaml \
+  bash -lc 'mkdir -p /tmp/model-analyzer && model-analyzer profile \
+  -f /workspace/profiling/model-analyzer.yaml' \
   > results/model-analyzer/run.log 2>&1

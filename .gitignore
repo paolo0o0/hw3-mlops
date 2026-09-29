@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+results/perf/
+results/model-analyzer/checkpoints/
+results/model-analyzer/models/
+results/model-analyzer/reports/
+results/model-analyzer/perf.log
+results/model-analyzer/triton.log
+results/model-analyzer/run.log
